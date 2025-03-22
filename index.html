@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lootora - Earn Rewards</title>
+    <title>Lootora - Earn Adult Rewards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src='//whephiwums.com/sdk.js' data-zone='9096341' data-sdk='show_9096341'></script>
+    <script src='//whephiwums.com/sdk.js' data-zone='9118797' data-sdk='show_9118797'></script>
     <style>
         /* General Styles */
         body {
@@ -253,7 +253,7 @@
 </head>
 <body>
     <header>
-        <h1>Lootora - Earn Rewards</h1>
+        <h1>Lootora - Earn Adult Rewards</h1>
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -272,7 +272,7 @@
     
     <section id="home">
         <h2>Welcome to Lootora</h2>
-        <p>Watch ads and earn amazing rewards effortlessly! Start earning today and redeem your balance for exciting gifts.</p>
+        <p>Watch ads and earn exclusive adult content! Start earning today and redeem your balance for exciting rewards.</p>
         <button onclick="redirectToProfile()">Watch Ad & Earn</button>
     </section>
     
@@ -282,14 +282,14 @@
         <ol>
             <li>Watch an ad.</li>
             <li>Earn 1 ad count for every ad you watch.</li>
-            <li>Every 50 ads watched = 1 free Nude.</li>
+            <li>Every 50 ads watched = 1 free exclusive adult content.</li>
         </ol>
     </section>
     
     <section id="rewards">
         <h2>Available Rewards</h2>
         <ul class="reward-list">
-            <li>1 Free Nude (50 ads watched)</li>
+            <li>1 Free Exclusive Adult Content (50 ads watched)</li>
         </ul>
     </section>
     
@@ -301,7 +301,7 @@
         </div>
         <div class="faq-item">
             <h3>How do I redeem my reward?</h3>
-            <p>Once you reach 50 ads watched, you will automatically receive 1 free Nude.</p>
+            <p>Once you reach 50 ads watched, you will automatically receive 1 free exclusive adult content.</p>
         </div>
         <div class="faq-item">
             <h3>Is there a limit to how many ads I can watch?</h3>
@@ -313,7 +313,7 @@
         <h2>Your Profile</h2>
         <div class="profile-info">
             <p>Ads Watched: <span id="ad-count">0</span></p>
-            <p>Free Nudes Earned: <span id="nude-count">0</span></p>
+            <p>Exclusive Content Earned: <span id="content-count">0</span></p>
         </div>
         <button onclick="watchAd()">Watch Ad & Earn</button>
         <div class="progress-bar">
@@ -329,25 +329,25 @@
     <script>
         // Load data from LocalStorage
         let adCount = parseInt(localStorage.getItem('adCount')) || 0;
-        let nudeCount = parseInt(localStorage.getItem('nudeCount')) || 0;
+        let contentCount = parseInt(localStorage.getItem('contentCount')) || 0;
 
         // Update UI
         function updateUI() {
             document.getElementById('ad-count').innerText = adCount;
-            document.getElementById('nude-count').innerText = nudeCount;
+            document.getElementById('content-count').innerText = contentCount;
             document.getElementById('progress-bar-fill').style.width = `${(adCount % 50) * 2}%`;
         }
 
         // Watch Ad Function
         function watchAd() {
-            show_9096341().then(() => {
+            show_9118797().then(() => {
                 adCount++; // Increment ad count
                 if (adCount % 50 === 0) {
-                    nudeCount++; // Increment nude count every 50 ads
-                    alert('Congratulations! You earned 1 free Nude.');
+                    contentCount++; // Increment content count every 50 ads
+                    alert('Congratulations! You earned 1 free exclusive adult content.');
                 }
                 localStorage.setItem('adCount', adCount);
-                localStorage.setItem('nudeCount', nudeCount);
+                localStorage.setItem('contentCount', contentCount);
                 updateUI();
             }).catch(e => {
                 alert('Ad failed to load. Try again later.');
